@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="loader"></div>
+    <p class="text-center">You will be redirected in a second</p>
+    <p class="text-center">If redirect didn't occur - click on button below</p>
+    <form id="tip" name="Pay" method="POST" action="{{ form_url }}" accept-charset="UTF-8">
+        <input type="hidden" name="amount" value="{{ invoice.amount }}"/>
+        <input type="hidden" name="currency" value="{{ invoice.currency }}"/>
+        <input type="hidden" name="shop_id" value="{{ shop_id }}"/>
+        <input type="hidden" name="sign" value="{{ invoice.signature() }}"/>
+        <input type="hidden" name="shop_invoice_id" value="{{ invoice._param_mapping['shop_invoice_id'] }}"/>
+        <input type="hidden" name="description" value="{{ invoice.description }}"/>
+        <div class="col-md-12 text-center">
+            <input class="btn btn-default" type="submit" value="Proceed"/>
+        </div>
+    </form>
+    <script type="text/javascript">
+        setTimeout(function () {
+            jQuery("#tip").submit()
+        }, 2500)
+    </script>
+{% endblock %}
