@@ -1,6 +1,6 @@
 # Install
 ## Prerequisites
-- Install python 3.5.*
+- Install python 
 
     ```apt-get install python```
     
