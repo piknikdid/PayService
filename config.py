@@ -7,7 +7,7 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 CSRF_ENABLED = True
-SECRET_KEY = 'asdf86tasdhfuisdfKHgdfasuasdyf7asdf9'
+SECRET_KEY = 'fill this field'
 
 #PayService API params
 PS_TIP_URL = 'https://tip.pay-trio.com/ru/'
